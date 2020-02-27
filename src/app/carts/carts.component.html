@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="jumbotron">
+        <h3 class="text-center text-dark">CART</h3>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>more</th>
+        </tr>
+        <tr *ngFor="let item of product">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td><button class="btn btn-primary" id={{item.name}} (click)="addtocart($event)">{{cta}}</button></td>
+        </tr>
+    </table>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <h2 class="text-center text-dark">Cart Items</h2>
+        <hr>
+    </div>
+    <table class="table border-0">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>more</th>
+        </tr>
+        <tr *ngFor="let item of addcart; let i = index">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td><button class="btn btn-primary" (click)="removeItem(i)">remove</button></td>
+        </tr>
+    </table>
+</div>
