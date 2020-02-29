@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UsercerdService } from './service/usercerd.service';
+import { LoaderService } from './service/loader.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -17,7 +18,7 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [UsercerdService],
+  providers: [UsercerdService, LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
