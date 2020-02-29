@@ -6,10 +6,16 @@ import { UsercerdService } from './service/usercerd.service';
 import { LoaderService } from './service/loader.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { MarketComponent } from './market/market.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    CreateaccountComponent,
+    MarketComponent
   ],
   imports: [
     BrowserModule,

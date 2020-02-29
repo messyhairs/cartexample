@@ -1,0 +1,9 @@
+<div class="col-md-6">
+    <h2 class="text-center">Invoice</h2>
+    <div class="container">
+        <div *ngFor="let userdetails of getname">
+            <div class="font-weight-bold float-right">{{userdetails.name}}</div>
+        </div>
+    </div>
+    <button class="btn btn-danger" (click)="logout()">logout</button>
+</div>
