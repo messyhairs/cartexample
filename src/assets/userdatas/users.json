@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "865099d7-eaa3-2c08-1d0f-f5d0892832aa",
+      "name": "none",
+      "password": "asdasdasdasd",
+      "email": "vinod@gmail.com"
+    },
+    {
+      "id": "703541f5-663f-f15d-f405-a13a453e8a2c",
+      "name": "check",
+      "password": "uitastau",
+      "email": "check@gmail.com"
+    }
+  ]
+}
