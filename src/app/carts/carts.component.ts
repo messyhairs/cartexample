@@ -20,7 +20,7 @@ export class CartsComponent implements OnInit {
   ];
   public addcart: any = [];
   public cta = 'ADD';
-  public amount : any = [];
+  public amount = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -31,7 +31,7 @@ export class CartsComponent implements OnInit {
       this.product.forEach(element => {
         if (datas === element.name) {
           this.addcart.push(element);
-          this.amount.push(element.price);
+          this.amount += element.price;
         }
       });
       console.log(this.addcart);
@@ -42,5 +42,9 @@ export class CartsComponent implements OnInit {
     // 1 defines delete one item from list at a time
     this.addcart.splice(i, 1);
     console.log(this.addcart);
+    this.addcart.forEach(element => {
+      element.price.splice(i, 1);
+      console.log(element.price);
+    });
   }
 }
