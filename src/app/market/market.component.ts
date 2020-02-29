@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {LoaderService} from '../service/loader.service';
+import { LoaderService } from '../service/loader.service';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { UUID } from 'angular2-uuid';
@@ -14,7 +14,7 @@ export class MarketComponent implements OnInit {
   getuserdatas: any;
   getname: any = [];
   name: any;
-  constructor(private formBuilder: FormBuilder, private router: Router, 
+  constructor(private formBuilder: FormBuilder, private router: Router,
               private loader: LoaderService) { }
 
   addForm: FormGroup;
@@ -29,7 +29,7 @@ export class MarketComponent implements OnInit {
       console.log(this.getname);
       this.loader.display(false);
     } else {
-      this.router.navigate(['login']);
+      this.router.navigate(['/login']);
     }
   }
 
@@ -37,7 +37,7 @@ export class MarketComponent implements OnInit {
     this.loader.display(true);
     localStorage.removeItem('currentuserdetails');
     localStorage.clear();
-    this.router.navigate(['login']);
+    this.router.navigate(['/login']);
     this.loader.display(false);
 
   }
